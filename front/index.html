@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>نور الله | للعقارات</title>
+  <meta name="description" content="منصة نور الله لحجز الشقق وبيع الأراضي في مصر — عقود رسمية وحماية كاملة"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-inner">
+    <div class="loader-logo">
+      <svg class="loader-svg" width="56" height="56" viewBox="0 0 48 48" fill="none">
+        <path class="lp1" d="M24 4L44 18V44H4V18L24 4Z" stroke="#C9A84C" stroke-width="2" fill="none" stroke-dasharray="120" stroke-dashoffset="120"/>
+        <path class="lp2" d="M18 44V30H30V44" stroke="#C9A84C" stroke-width="2" fill="none" stroke-dasharray="40" stroke-dashoffset="40"/>
+      </svg>
+      <span>نور الله</span>
+    </div>
+    <div class="loader-track"><div class="loader-fill"></div></div>
+    <p class="loader-hint">جاري تحميل العقارات…</p>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="nav-wrap">
+    <a href="#" class="nav-logo">
+      <svg width="20" height="20" viewBox="0 0 48 48" fill="none"><path d="M24 4L44 18V44H4V18L24 4Z" stroke="#C9A84C" stroke-width="2.5" fill="none"/><path d="M18 44V30H30V44" stroke="#C9A84C" stroke-width="2.5" fill="none"/></svg>
+      نور <em>الله</em>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero" onclick="closeNav()">الرئيسية</a></li>
+      <li><a href="#listings" onclick="closeNav()">العقارات</a></li>
+      <li><a href="#how" onclick="closeNav()">كيف يعمل</a></li>
+      <li><a href="#trust" onclick="closeNav()">لماذا نحن</a></li>
+      <li><a href="#contact" onclick="closeNav()">تواصل</a></li>
+    </ul>
+    <div class="nav-end">
+      <button class="btn-ghost" onclick="openAuth('login')">دخول</button>
+      <button class="btn-gold" onclick="openAuth('register')">حساب جديد</button>
+      <button class="ham" id="ham" onclick="toggleNav()"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-glow g1"></div>
+  <div class="hero-glow g2"></div>
+  <div class="hero-dots"></div>
+  <div class="hero-wrap">
+    <div class="hero-text">
+      <div class="pill fade-up d1"><span class="pill-dot"></span> أكثر من 120 عقار متاح الآن</div>
+      <h1 class="hero-h1 fade-up d2">
+        ابحث عن<br/>
+        <span class="gold">شقتك المثالية</span><br/>
+        أو أرضك الزراعية
+      </h1>
+      <p class="hero-p fade-up d3">وسيطك العقاري الموثوق في مصر — حجز آمن،<br/>عقود رسمية، وحماية كاملة لحقوقك.</p>
+      <div class="hero-btns fade-up d4">
+        <a href="#listings" class="btn-gold btn-lg"><i class="fas fa-search"></i> ابدأ البحث</a>
+        <a href="https://wa.me/201503244665" target="_blank" class="btn-wa btn-lg"><i class="fab fa-whatsapp"></i> واتساب</a>
+      </div>
+      <div class="hero-stats fade-up d5">
+        <div class="hs"><strong id="statApts">0</strong><span>عقار</span></div>
+        <div class="hsdiv"></div>
+        <div class="hs"><strong id="statClients">0</strong><span>عميل راضٍ</span></div>
+        <div class="hsdiv"></div>
+        <div class="hs"><strong id="statCities">0</strong><span>مدينة</span></div>
+      </div>
+    </div>
+    <div class="hero-card-wrap fade-up d3">
+      <div class="hero-card">
+        <div class="hc-img">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=80" alt="شقة" loading="eager" style="opacity:0;transition:opacity .6s" onload="this.style.opacity=1"/>
+          <div class="hc-wm">نور الله 🏠</div>
+          <div class="hc-badge">مميزة</div>
+        </div>
+        <div class="hc-body">
+          <div class="hc-title">شقة فاخرة على الكورنيش</div>
+          <div class="hc-loc"><i class="fas fa-map-marker-alt"></i> سيدي بشر، الإسكندرية</div>
+          <div class="hc-foot">
+            <div class="hc-price">1,200 <small>جنيه/ليلة</small></div>
+            <button class="btn-gold" style="padding:7px 16px;font-size:.82rem" onclick="openApt(1)">احجز</button>
+          </div>
+        </div>
+      </div>
+      <div class="chip c-contract fade-up d4"><span>📜</span><div><b>عقد رسمي</b><br/><small>لكل حجز</small></div></div>
+      <div class="chip c-rating fade-up d5"><span>⭐</span><div><b>4.9 / 5</b><br/><small>تقييم العملاء</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SEARCH -->
+<section id="search-bar">
+  <div class="sb-wrap fade-up" id="searchSection">
+    <div class="sb-inner">
+      <div class="sf"><label>📍 المدينة</label>
+        <select id="filterCity">
+          <option value="">كل المدن</option>
+          <option>الإسكندرية</option><option>الساحل الشمالي</option>
+          <option>القاهرة</option><option>الغردقة</option>
+          <option>شرم الشيخ</option><option>دمياط</option>
+        </select>
+      </div>
+      <div class="sf"><label>👥 الأشخاص</label>
+        <select id="filterPersons">
+          <option value="">أي عدد</option>
+          <option value="1">1–2</option><option value="3">3–4</option>
+          <option value="5">5–6</option><option value="7">7+</option>
+        </select>
+      </div>
+      <div class="sf"><label>🏷️ النوع</label>
+        <select id="filterType">
+          <option value="">الكل</option>
+          <option value="مصيف">مصيف</option>
+          <option value="طالب">طالب</option>
+          <option value="عائلي">عائلي</option>
+        </select>
+      </div>
+      <button class="btn-gold" onclick="filterApartments()"><i class="fas fa-search"></i> بحث</button>
+    </div>
+  </div>
+</section>
+
+<!-- LISTINGS -->
+<section id="listings">
+  <div class="sec-wrap">
+    <div class="sec-head fade-up">
+      <p class="eyebrow">عقاراتنا</p>
+      <h2 class="sec-title">اختار <span class="gold">عقارك</span></h2>
+      <p class="sec-sub">شقق ومصايف وأراضي — مع عقود رسمية وحماية كاملة</p>
+    </div>
+    <div class="ltabs fade-up">
+      <button class="ltab active" id="tabApts" onclick="switchMainTab('apts',this)">
+        <i class="fas fa-building"></i> الشقق <span class="lcount">6</span>
+      </button>
+      <button class="ltab" id="tabLands" onclick="switchMainTab('lands',this)">
+        <i class="fas fa-seedling"></i> الأراضي <span class="lcount">3</span>
+      </button>
+    </div>
+    <div class="cards-grid" id="aptGrid"></div>
+  </div>
+</section>
+
+<!-- HOW -->
+<section id="how">
+  <div class="sec-wrap">
+    <div class="sec-head fade-up">
+      <p class="eyebrow">العملية</p>
+      <h2 class="sec-title">كيف <span class="gold">يعمل</span></h2>
+      <p class="sec-sub">٤ خطوات وشقتك في انتظارك</p>
+    </div>
+    <div class="how-grid">
+      <div class="how-card fade-up d1"><div class="how-n">01</div><div class="how-i"><i class="fas fa-search"></i></div><h3>اختر العقار</h3><p>تصفح الشقق والأراضي وشوف كل التفاصيل</p></div>
+      <div class="how-card fade-up d2"><div class="how-n">02</div><div class="how-i"><i class="fas fa-user-edit"></i></div><h3>ادخل بياناتك</h3><p>اسمك وهاتفك وصورة البطاقة لضمان حقوقك</p></div>
+      <div class="how-card fade-up d3"><div class="how-n">03</div><div class="how-i"><i class="fas fa-file-contract"></i></div><h3>راجع العقد</h3><p>عقد رسمي يظهر لك قبل الدفع — اقرأه وأمضِه</p></div>
+      <div class="how-card fade-up d4"><div class="how-n">04</div><div class="how-i"><i class="fas fa-check-circle"></i></div><h3>تأكيد فوري</h3><p>رسالة واتساب بالعقد وتفاصيل حجزك</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section id="trust">
+  <div class="sec-wrap">
+    <div class="sec-head fade-up">
+      <p class="eyebrow">ثقتك أمانتنا</p>
+      <h2 class="sec-title">لماذا <span class="gold">نور الله؟</span></h2>
+    </div>
+    <div class="trust-grid">
+      <div class="trust-card fade-up d1"><div class="ti">📜</div><h3>عقد رسمي لكل حجز</h3><p>عقد رقمي موقع يظهر فور الحجز — يحمي الجميع</p></div>
+      <div class="trust-card fade-up d2"><div class="ti">💼</div><h3>عمولة مضمونة</h3><p>العمولة تُدفع لنور الله أولاً — مستحيل أحد يتجاوزك</p></div>
+      <div class="trust-card fade-up d3"><div class="ti">🔒</div><h3>أمان وخصوصية</h3><p>عقارات موثقة — بيانات العملاء محمية</p></div>
+      <div class="trust-card fade-up d1"><div class="ti">💳</div><h3>دفع متعدد الطرق</h3><p>فيزا، ماستركارد، فودافون كاش، تحويل بنكي</p></div>
+      <div class="trust-card fade-up d2"><div class="ti">🌿</div><h3>شقق وأراضي</h3><p>مصايف وطلاب وعائلي — وأراضي زراعية وللبناء</p></div>
+      <div class="trust-card fade-up d3"><div class="ti">📱</div><h3>تأكيد واتساب فوري</h3><p>رسالة واتساب بالعقد وتفاصيل الحجز فوراً</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="sec-wrap">
+    <div class="sec-head fade-up">
+      <p class="eyebrow">تواصل معنا</p>
+      <h2 class="sec-title">نحن <span class="gold">هنا لك</span></h2>
+    </div>
+    <div class="contact-grid fade-up">
+      <div class="contact-card">
+        <div class="cc-i">📞</div>
+        <h3>اتصل بنا</h3>
+        <p>مباشر على رقمنا — متاحون طول اليوم</p>
+        <a href="tel:01503244665" class="btn-gold" style="margin-top:18px;display:inline-flex">01503244665</a>
+      </div>
+      <div class="contact-card cc-wa">
+        <div class="cc-i">💬</div>
+        <h3>واتساب</h3>
+        <p>راسلنا وهنرد فوراً في أي وقت</p>
+        <a href="https://wa.me/201503244665" target="_blank" class="btn-wa" style="margin-top:18px;display:inline-flex">
+          <i class="fab fa-whatsapp"></i> ابدأ محادثة
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-wrap">
+    <div class="footer-brand">
+      <div class="nav-logo" style="margin-bottom:14px">
+        <svg width="20" height="20" viewBox="0 0 48 48" fill="none"><path d="M24 4L44 18V44H4V18L24 4Z" stroke="#C9A84C" stroke-width="2.5" fill="none"/><path d="M18 44V30H30V44" stroke="#C9A84C" stroke-width="2.5" fill="none"/></svg>
+        نور <em>الله</em>
+      </div>
+      <p>منصة نور الله للعقارات — شقق ومصايف وأراضي مع عقود رسمية وحماية كاملة لحقوقك.</p>
+      <div class="social-row">
+        <a href="https://wa.me/201503244665" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+    <div class="fcol"><h4>روابط</h4><ul><li><a href="#hero">الرئيسية</a></li><li><a href="#listings">العقارات</a></li><li><a href="#how">كيف يعمل</a></li><li><a href="#trust">لماذا نحن</a></li></ul></div>
+    <div class="fcol"><h4>خدماتنا</h4><ul><li><a href="#">شقق مصيف</a></li><li><a href="#">شقق طلاب</a></li><li><a href="#">شقق عائلية</a></li><li><a href="#">أراضي زراعية</a></li><li><a href="#">أراضي للبناء</a></li></ul></div>
+    <div class="fcol"><h4>المدن</h4><ul><li><a href="#">الإسكندرية</a></li><li><a href="#">الساحل الشمالي</a></li><li><a href="#">الغردقة</a></li><li><a href="#">دمياط</a></li><li><a href="#">شرم الشيخ</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 نور الله. جميع الحقوق محفوظة</span>
+    <span>صُنع بـ ❤️ لخدمة المصريين</span>
+  </div>
+</footer>
+
+<!-- MODALS -->
+<div class="modal-overlay" id="aptModal">
+  <div class="modal-box"><button class="modal-x" onclick="closeModal('aptModal')"><i class="fas fa-times"></i></button><div id="aptModalContent"></div></div>
+</div>
+<div class="modal-overlay" id="contractModal">
+  <div class="modal-box" style="max-width:680px"><button class="modal-x" onclick="closeModal('contractModal')"><i class="fas fa-times"></i></button><div id="contractContent"></div></div>
+</div>
+<div class="modal-overlay" id="authModal">
+  <div class="modal-box" style="max-width:460px">
+    <button class="modal-x" onclick="closeModal('authModal')"><i class="fas fa-times"></i></button>
+    <div class="auth-inner">
+      <div class="auth-logo"><svg width="32" height="32" viewBox="0 0 48 48" fill="none"><path d="M24 4L44 18V44H4V18L24 4Z" stroke="#C9A84C" stroke-width="2" fill="none"/><path d="M18 44V30H30V44" stroke="#C9A84C" stroke-width="2" fill="none"/></svg><span>نور الله</span></div>
+      <div class="auth-tabs">
+        <button class="atab active" id="loginTab" onclick="switchTab('login')">دخول</button>
+        <button class="atab" id="registerTab" onclick="switchTab('register')">حساب جديد</button>
+      </div>
+      <div id="loginPanel">
+        <div class="fg"><label>رقم الهاتف</label><input class="fc" type="tel" placeholder="01xxxxxxxxx"/></div>
+        <div class="fg"><label>كلمة المرور</label><input class="fc" type="password" placeholder="••••••••"/></div>
+        <button class="btn-gold" style="width:100%;margin-top:8px" onclick="fakeLogin()"><i class="fas fa-sign-in-alt"></i> دخول</button>
+      </div>
+      <div id="registerPanel" style="display:none">
+        <div class="fg"><label>الاسم الكامل</label><input class="fc" type="text" placeholder="اسمك بالكامل"/></div>
+        <div class="fg"><label>رقم الهاتف</label><input class="fc" type="tel" placeholder="01xxxxxxxxx"/></div>
+        <div class="fg"><label>كلمة المرور</label><input class="fc" type="password" placeholder="••••••••"/></div>
+        <div class="fg">
+          <label>🪪 صورة البطاقة الوطنية</label>
+          <div class="upload-zone" onclick="document.getElementById('idCardInput').click()">
+            <i class="fas fa-id-card"></i><p>اضغط لرفع صورة البطاقة</p>
+            <input type="file" id="idCardInput" accept="image/*" style="display:none" onchange="showIdPreview(this)"/>
+          </div>
+          <img id="idPreview" style="display:none;width:100%;border-radius:8px;margin-top:10px"/>
+        </div>
+        <button class="btn-gold" style="width:100%;margin-top:8px" onclick="fakeRegister()"><i class="fas fa-user-plus"></i> إنشاء الحساب</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="toast-container"></div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
